@@ -2,6 +2,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:background="#D8EDEF"
+    android:padding="30px"
     android:gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
@@ -22,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/name"
+        android:drawableRight="@drawable/baseline_account_box_24"
         android:hint="Enter your name" />
     <TextView
         android:layout_width="match_parent"
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:hint="Enter your Admission No."
         android:inputType="number"
+        android:drawableRight="@drawable/baseline_add_comment_24"
         android:id="@+id/adnum" />
     <TextView
         android:layout_width="match_parent"
@@ -46,6 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sysnum"
+        android:drawableRight="@drawable/baseline_add_comment_24"
         android:hint="Enter your System Number" />
     <TextView
         android:layout_width="match_parent"
@@ -57,6 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/dept"
+        android:drawableRight="@drawable/baseline_add_comment_24"
         android:hint="Enter your Deoartment" />
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"

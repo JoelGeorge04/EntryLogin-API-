@@ -1,9 +1,16 @@
 <LinearLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#D2DBDC"
+    android:padding="35px"
+    android:background="@drawable/background"
     android:gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="167dp"
+        android:layout_height="144dp"
+        android:background="@drawable/clear" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/uname"
+        android:drawableRight="@drawable/baseline_account_box_24"
         android:hint="Enter your name" />
     <TextView
         android:layout_width="match_parent"
@@ -32,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your Password"
+        android:drawableRight="@drawable/baseline_remove_red_eye_24"
         android:inputType="textPassword"
         android:id="@+id/pass" />
     <androidx.appcompat.widget.AppCompatButton

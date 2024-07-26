@@ -1,6 +1,7 @@
 package com.logixspace.entrylogapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -21,6 +22,13 @@ EditText e1,e2;
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        SharedPreferences p = getSharedPreferences("Log",MODE_PRIVATE);
+        String userName=p.getString("user",null);
+        if(userName!=null)
+        {
+            Intent i=new Intent(getApplicationContext(), LoggedPage.class);
+            startActivity(i);
+        }
         b1=(AppCompatButton) findViewById(R.id.login);
         e1=(EditText)findViewById((R.id.uname));
         e2=(EditText)findViewById((R.id.pass));
@@ -29,16 +37,23 @@ EditText e1,e2;
             public void onClick(View v) {
                 String userName = e1.getText().toString();
                 String passw = e2.getText().toString();
-                if(userName.equals("admin") && passw.equals("1234")) {
-                    Intent i=new Intent(getApplicationContext(), LoggedPage.class);
+
+
+                if (userName.equals("admin") && passw.equals("1234")) {
+                    SharedPreferences p = getSharedPreferences("Log", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = p.edit();
+                    editor.putString("user", "admin");
+                    editor.apply();
+                    Intent i = new Intent(getApplicationContext(), LoggedPage.class);
                     startActivity(i);
+                } else if (userName.equals("") || passw.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Enter the field values !!", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Wrong Password or Username!!", Toast.LENGTH_LONG).show();
                 }
-                else{
-                    Toast.makeText(getApplicationContext(),"Wrong Password or Username!!",Toast.LENGTH_LONG).show();
-                }
-
             }
-        });
+                 });
+            }
 
-    }
-}
+        }
+

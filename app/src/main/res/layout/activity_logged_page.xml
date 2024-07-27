@@ -22,6 +22,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:id="@+id/name"
         android:drawableRight="@drawable/baseline_account_box_24"
         android:hint="Enter your name" />
@@ -34,6 +35,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:hint="Enter your Admission No."
         android:inputType="number"
         android:drawableRight="@drawable/baseline_add_comment_24"
@@ -48,6 +50,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:id="@+id/sysnum"
         android:drawableRight="@drawable/baseline_add_comment_24"
         android:hint="Enter your System Number" />
@@ -61,6 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/dept"
+        android:textColor="@color/black"
         android:drawableRight="@drawable/baseline_add_comment_24"
         android:hint="Enter your Deoartment" />
     <androidx.appcompat.widget.AppCompatButton
@@ -68,6 +72,7 @@
         android:layout_height="wrap_content"
         android:background="#00aabb"
         android:padding="20px"
+        android:textColor="@color/white"
         android:layout_margin="20px"
         android:id="@+id/add"
         android:text="Add"/>
@@ -76,6 +81,7 @@
         android:layout_height="wrap_content"
         android:background="#FB1B3D"
         android:id="@+id/logout"
+        android:textColor="@color/white"
         android:padding="20px"
         android:text="logout"/>
 

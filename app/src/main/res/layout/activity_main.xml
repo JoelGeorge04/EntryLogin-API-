@@ -28,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/uname"
+        android:textColor="@color/black"
         android:drawableRight="@drawable/baseline_account_box_24"
         android:hint="Enter your name" />
     <TextView
@@ -42,6 +43,7 @@
         android:hint="Enter your Password"
         android:drawableRight="@drawable/baseline_remove_red_eye_24"
         android:inputType="textPassword"
+        android:textColor="@color/black"
         android:id="@+id/pass" />
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
